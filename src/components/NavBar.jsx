@@ -24,7 +24,7 @@ const Navbar = () => {
 
         <div className="navbar-bottom">
           <div className="bottom-left">Vancouver, BC</div>
-          <div className="bottom-right">Made with 💛</div>
+          <div className="bottom-right">Made with 🍸</div>
         </div>
       </header>
 

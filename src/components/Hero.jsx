@@ -12,7 +12,7 @@ const Hero = () => {
         muted
         playsInline
       />
-      <h1 className="hero-tagline">A COLLABORATIVE DESIGN STUDIO <br></br>BUILT TO DISRUPT DESIGNED TO FEEL</h1>
+      <h1 className="hero-tagline">A COLLABORATIVE DESIGN STUDIO <br></br>BUILT TO DISRUPT, DESIGNED TO FEEL.</h1>
     </section>
   );
 };
