@@ -1,0 +1,16 @@
+#who-we-are_wrapper {
+  background-color: var(--color-warm-gray);
+  padding: 0; /* remove top/bottom padding so vertical centering is accurate */
+}
+
+#who-we-are-_content {
+  height: 100vh;
+}
+
+.who-we-are_text {
+  font-size: 2.5rem;
+  color: var(--color-black);
+  line-height: 1.6;
+  max-width: 80%;
+  margin: 0 auto;
+}

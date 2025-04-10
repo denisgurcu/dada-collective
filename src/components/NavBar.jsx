@@ -9,7 +9,7 @@ const Navbar = () => {
       <header className="navbar">
         <div className="navbar-top">
           <div className="logo">
-            <img src="/logo.png" alt="Dada Collective logo" />
+            <img src="/logo10.png" alt="Dada Collective logo" />
           </div>
 
           <div
