@@ -24,6 +24,9 @@
   --color-ink: #1a1a1a;         
   --color-mauve: #a0668d;       
   --color-warm-gray: #d8d3ce;   
+
+  /* Background Animation */
+  --animated-pulse-color: #8DAF94; /* start with pastel green */
 }
 
 * {

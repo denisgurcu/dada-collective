@@ -1,0 +1,9 @@
+.page-bg {
+    background-color: var(--animated-pulse-color); /* Start with a color */
+    transition: background-color 2s ease-in-out; /* slower & softer */
+  }
+  
+  .page-bg.not-pulsing {
+    background-color: var(--color-warm-gray); /* transitions to this */
+  }
+  

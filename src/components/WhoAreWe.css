@@ -1,16 +1,39 @@
-#who-we-are_wrapper {
-  background-color: var(--color-warm-gray);
-  padding: 0; /* remove top/bottom padding so vertical centering is accurate */
-}
-
-#who-we-are-_content {
-  height: 100vh;
-}
-
-.who-we-are_text {
+.who-are-we_wrapper {
+  color: var(--color-ink);
   font-size: 2.5rem;
-  color: var(--color-black);
-  line-height: 1.6;
-  max-width: 80%;
-  margin: 0 auto;
+  line-height: 1.5;
 }
+
+/* The only remaining full section */
+.who-are-we_scroll-container {
+  height: 200vh;
+  position: relative;
+}
+
+.who-are-we_sticky-inner {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.who-are-we_split-text {
+  max-width: 1100px;
+  font-weight: 400;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.split-text {
+  display: inline-block;
+  opacity: 0;
+  margin-right: 12px;
+  margin-top: 12px;
+  white-space: pre;
+}
+
