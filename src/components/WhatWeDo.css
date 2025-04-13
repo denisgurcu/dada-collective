@@ -8,10 +8,9 @@
   
   .what-we-do_title {
     text-align: center;
-    font-size: 5rem;
-    font-family: var(--font-heading);
-    font-weight: var(--wght-medium);
+    font-size: 5.5rem;
     margin-bottom: 5rem;
+    
   }
   
   .what-we-do_container {

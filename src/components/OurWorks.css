@@ -1,0 +1,114 @@
+.our-works__wrapper {
+    height: 510vh;
+    background-color: var(--color-warm-gray);
+    position: relative;
+    padding-bottom: 10rem;
+    /* border: 2px solid var(--color-black);  */
+  }
+  
+  .our-works__cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  .our-works__card-container {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .our-works__card {
+    position: relative;
+    width: 80vw;
+    max-width: 1000px;
+    padding: 2rem 2rem;
+    border-radius: 2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    color: var(--color-ink);
+    top: 0; /* Will be overridden via inline style */
+  }
+
+  .our-works__title-banner {
+    padding: 3rem;
+    position: sticky;
+    top: 0;
+  }
+  
+  
+  /* Title Card */
+  .our-works__title-text {
+    /* border: 2px solid var(--color-black);  */
+    font-size: 5.5rem;
+    color: var(--color-ink);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+  /* .our-works__subtitle {
+    font-size: 2rem;
+    font-family: var(--font-body);
+    margin-top: 1rem;
+    font-style: italic;
+  } */
+  
+  .our-works__card h3 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--color-ink);
+  }
+  
+  .our-works__card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--color-ink);
+  }
+  
+  .our-works__card p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+  }
+  
+  .our-works__card-image {
+    margin-top: 1rem;
+    width: 100%;
+    height: 250px;
+    border-radius: 1.5rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* .our-works__spacer {
+    height: 20vh;
+  }
+   */
+  
+  @media (max-width: 1024px) {
+    .our-works__card {
+      padding: 2rem;
+      width: 90vw;
+    }
+  
+    .our-works__card-image {
+      height: 200px;
+    }
+  
+    .our-works__title-text {
+      font-size: 4.4rem;
+    }
+  
+    .our-works__subtitle {
+      font-size: 1.4rem;
+    }
+  }
+  
