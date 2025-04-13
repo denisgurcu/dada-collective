@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import gsap from "gsap";
-import { motion, useScroll } from "framer-motion";
+import { motion, useScroll, useInView } from "framer-motion";
 import Button from "../components/Button";
 import "./WhatWeDo.css";
 
@@ -104,14 +104,16 @@ const WhatWeDo = () => {
         });
     };
 
+    
+
     return (
         <motion.section
             className="what-we-do_wrapper"
             ref={sectionRef}
             variants={containerVariants}
-            initial="hidden"
+            initial="hidden"    
             whileInView="show"
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.1 }}
         >
             <motion.h2
                 className="what-we-do_title"
