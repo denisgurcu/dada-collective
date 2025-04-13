@@ -1,48 +1,38 @@
-import React, { useEffect, useRef } from "react";
-import gsap from "gsap-trial";
-import SplitText from "gsap-trial/SplitText";
-import { ScrollTrigger } from "gsap-trial/ScrollTrigger";
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import "./WhoAreWe.css";
 
-gsap.registerPlugin(SplitText, ScrollTrigger);
+const text =
+  "We’re a collaborative design studio driven by instinct, not instruction. Born from contrast. Built with care and chaos. We design identities that make people feel something — not just notice.";
 
 const WhoAreWe = () => {
-  const textRef = useRef(null);
+  const sectionRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end end"],
+  });
 
-  useEffect(() => {
-    const split = new SplitText(textRef.current, {
-      type: "words"
-    });
-
-    gsap.from(split.words, {
-      opacity: 0.1,
-      stagger: 0.2,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: textRef.current,
-        start: "top top",
-        end: "bottom bottom",
-        scrub: 5,
-        pin: true,
-        markers: true // helpful while testing
-      }
-    });
-
-    return () => split.revert();
-  }, []);
+  const words = text.split(" ");
 
   return (
-    <div id="who-we-are_wrapper" ref={textRef}>
-      <div id="who-we-are-_content">
-        <div className="who-we-are_text" >
-          We’re a collaborative design studio driven by instinct, not instruction.
-          Born from contrast. Built with care and chaos.
-          We design identities that make people feel something — not just notice.
-          Our work is bold, emotional, and unapologetically human.
-          We tell stories that bend. Concepts that breathe.
-          Ideas that don’t ask for permission.
+    <div className="who-are-we_wrapper">
+      <section className="who-are-we_scroll-container" ref={sectionRef}>
+        <div className="who-are-we_sticky-inner">
+          <div className="who-are-we_split-text">
+            {words.map((word, i) => {
+              const start = i / words.length;
+              const end = Math.min((i + 5) / words.length, 1); // clamp to 1
+              const opacity = useTransform(scrollYProgress, [start, end], [0.2, 1]);
+
+              return (
+                <motion.span key={i} style={{ opacity }} className="split-text">
+                  {word}
+                </motion.span>
+              );
+            })}
+          </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };
