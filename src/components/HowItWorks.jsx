@@ -83,14 +83,14 @@ const HowItWorks = () => {
   return (
     <motion.section className="how-it-works_wrapper" ref={sectionRef}>
       <div className="how-it-works_sticky">
-        <motion.h2
+        <motion.h3
           className="how-it-works_title"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           HOW IT WORKS
-        </motion.h2>
+        </motion.h3>
 
         <div className="how-it-works_content">
           <motion.div

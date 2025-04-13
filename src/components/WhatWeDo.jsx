@@ -115,13 +115,13 @@ const WhatWeDo = () => {
             whileInView="show"
             viewport={{ once: false, amount: 0.1 }}
         >
-            <motion.h2
+            <motion.h3
                 className="what-we-do_title"
                 custom={scrollDir === "down" ? 0 : services.length}
                 variants={itemVariants}
             >
                 WHAT WE DO
-            </motion.h2>
+            </motion.h3>
 
             <motion.div className="what-we-do_container" variants={containerVariants}>
                 {services.map((service, index) => {
