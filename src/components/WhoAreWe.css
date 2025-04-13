@@ -1,7 +1,8 @@
 .who-are-we_wrapper {
   color: var(--color-ink);
-  font-size: 2.5rem;
-  line-height: 1.5;
+  font-weight: var(--wght-medium);
+  font-size: 2rem;
+  line-height: 1.2;
 }
 
 /* The only remaining full section */
@@ -15,18 +16,19 @@
   top: 0;
   height: 100vh;
   display: flex;
+  flex-direction: column; /*  make children stack vertically */
   align-items: center;
-  justify-content: center;
-}
-
-.who-are-we_split-text {
-  max-width: 1100px;
-  font-weight: 400;
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   padding: 2rem;
   text-align: center;
+}
+
+.who-are-we_split-text {
+  max-width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
 }
 
 .split-text {
@@ -37,3 +39,9 @@
   white-space: pre;
 }
 
+.about-us-mask-wrapper {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}

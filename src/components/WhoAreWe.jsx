@@ -1,9 +1,17 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import "./WhoAreWe.css";
+import ParallaxVideos from './ParallaxVideos';
+import Button from "../components/Button";
 
-const text =
-  "We’re a collaborative design studio driven by instinct, not instruction. Born from contrast. Built with care and chaos. We design identities that make people feel something — not just notice.";
+// import MaskedTitle from './MaskedTitle'; 
+
+const text = `
+Dada Collective is a design studio that breaks mold.
+Where contrast fuels every bold connection.
+With care and chaos, we shape what’s real.
+Designing identities you don’t just see, but feel.
+`;
 
 const WhoAreWe = () => {
   const sectionRef = useRef(null);
@@ -12,26 +20,67 @@ const WhoAreWe = () => {
     offset: ["start start", "end end"],
   });
 
-  const words = text.split(" ");
+  // Split into sentences, then into words
+  const sentences = text
+    .trim()
+    .split("\n")
+    .map((line) => line.trim())
+    .filter(Boolean); // Remove empty lines
+
+  const [revealButton, setRevealButton] = useState(false);
+
+  useEffect(() => {
+    return scrollYProgress.on("change", (v) => {
+      setRevealButton(v > 0.85); // shows after 85%, hides below
+    });
+  }, [scrollYProgress]);
 
   return (
     <div className="who-are-we_wrapper">
       <section className="who-are-we_scroll-container" ref={sectionRef}>
         <div className="who-are-we_sticky-inner">
-          <div className="who-are-we_split-text">
-            {words.map((word, i) => {
-              const start = i / words.length;
-              const end = Math.min((i + 5) / words.length, 1); // clamp to 1
-              const opacity = useTransform(scrollYProgress, [start, end], [0.2, 1]);
 
+          {/* <MaskedTitle text="Who We Are" /> */}
+
+          <div className="who-are-we_split-text">
+            {sentences.map((sentence, sIndex) => {
+              const sentenceWords = sentence.split(" ");
               return (
-                <motion.span key={i} style={{ opacity }} className="split-text">
-                  {word}
-                </motion.span>
+                <div key={sIndex} className="sentence-line">
+                  {sentenceWords.map((word, wIndex) => {
+                    const i = sIndex * 10 + wIndex; // basic staggering index
+                    const start = i / (sentences.length * 10);
+                    const end = Math.min((i + 5) / (sentences.length * 10), 1);
+                    const opacity = useTransform(scrollYProgress, [start, end], [0.15, 1]);
+
+                    return (
+                      <motion.span key={wIndex} style={{ opacity }} className="split-text">
+                        {word}
+                      </motion.span>
+                    );
+                  })}
+                </div>
               );
             })}
           </div>
+
+          <div className="about-us-mask-wrapper">
+            <motion.div
+              initial={{ y: "100%" }}
+              animate={{ y: revealButton ? "0%" : "100%" }}
+              transition={{ duration: 0.6, ease: "easeInOut" }}
+            >
+              <Button label="About Us" />
+            </motion.div>
+          </div>
+
+
+
+          <ParallaxVideos scrollProgress={scrollYProgress} />
         </div>
+
+
+
       </section>
     </div>
   );

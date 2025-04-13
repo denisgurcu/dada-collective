@@ -1,8 +1,11 @@
 import React from 'react';
 import Hero from '../components/Hero';
 import WhoAreWe from '../components/WhoAreWe';
+import WhatWeDo from '../components/WhatWeDo';
+
 import { useHeroVisibility } from '../hooks/useHeroVisibility';
 import { useHeroPulseColor } from '../hooks/useHeroPulseColor'; 
+
 
 import './Home.css';
 
@@ -15,6 +18,7 @@ const Home = () => {
       <main className="home-page">
         <Hero />
         <WhoAreWe />
+        <WhatWeDo />
       </main>
     </div>
   );
