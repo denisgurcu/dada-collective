@@ -1,0 +1,112 @@
+.how-it-works_wrapper {
+    height: 300vh; /* gives scroll space for animation */
+    position: relative;
+    background-color: var(--color-warm-gray);
+  }
+  
+  .how-it-works_sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    padding: 5rem;
+
+/* 
+    border: 3px dashed rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 0, 0, 0.05); */
+  }
+  
+  .how-it-works_title {
+    text-align: center;
+    font-size: 5.5rem;
+    font-family: var(--font-heading);
+    font-weight: var(--wght-medium);
+    margin-bottom: 4rem;
+  }
+  
+  .how-it-works_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1600px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  
+  .how-it-works_text-block {
+    flex: 1;
+    max-width: 600px;
+    color: var(--color-ink);
+    padding: 2rem 4rem;
+    font-size: 2.2rem;
+    font-family: var(--font-body);
+    font-weight: var(--wght-medium);
+    /* border: 2px solid var(--color-black); */
+    line-height: 1.5;
+    text-align: justify;
+    text-align-last: left;
+    hyphens: auto;
+    word-break: break-word;
+  }
+  
+  /* .how-it-works_text-left {
+    text-align: left;
+  }
+  
+  .how-it-works_text-right {
+    text-align: right;
+  } */
+  
+  .how-it-works_hands {
+    position: absolute;
+    bottom: 5rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+    pointer-events: none;
+  }
+  
+  .hand-image {
+    width: 480px; /* Bigger hands */
+    height: auto;
+    filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.3));
+    transform: translateY(0) scale(1.05);
+    object-fit: contain;
+    pointer-events: none;
+    z-index: 5;
+  }
+  
+  .hand-image.left {
+    transform: translateX(-20%) scale(1.15) rotateZ(-4deg);
+  }
+  
+  .hand-image.right {
+    transform: translateX(20%) scale(1.15) rotateZ(4deg);
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .how-it-works_content {
+      flex-direction: column;
+      gap: 4rem;
+    }
+  
+    .how-it-works_text-block {
+      text-align: center !important;
+      max-width: 90%;
+      font-size: 2rem;
+    }
+  
+    .hand-image {
+      max-width: 200px;
+    }
+  }
+  

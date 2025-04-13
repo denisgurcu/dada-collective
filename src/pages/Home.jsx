@@ -2,6 +2,8 @@ import React from 'react';
 import Hero from '../components/Hero';
 import WhoAreWe from '../components/WhoAreWe';
 import WhatWeDo from '../components/WhatWeDo';
+import HowItWorks from '../components/HowItWorks';
+
 
 import { useHeroVisibility } from '../hooks/useHeroVisibility';
 import { useHeroPulseColor } from '../hooks/useHeroPulseColor'; 
@@ -19,6 +21,7 @@ const Home = () => {
         <Hero />
         <WhoAreWe />
         <WhatWeDo />
+        <HowItWorks />
       </main>
     </div>
   );
