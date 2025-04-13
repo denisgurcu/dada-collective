@@ -30,9 +30,9 @@
     left: 50%;
     transform: translateX(-50%);
     font-family: var(--font-body);
+    font-weight: var(--wght-regular);
     font-size: 1.5rem;
     text-transform: uppercase;
-    font-weight: 700;
     color: var(--color-black);
     text-align: center;
     letter-spacing: 0.05em;

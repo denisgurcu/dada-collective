@@ -1,0 +1,19 @@
+.who-we-vid {
+    position: absolute;
+    width: 250px;
+    height: auto;
+    pointer-events: none;
+    opacity: 0.85;
+    z-index: 1;
+  }
+  
+  .top-right {
+    top: 15%;
+    right: 15%;
+  }
+  
+  .bottom-left {
+    bottom: 15%;
+    left: 15%;
+  }
+  

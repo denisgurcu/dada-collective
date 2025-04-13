@@ -8,10 +8,14 @@
   --font-display: "poster-cut-neue", sans-serif;
 
   /* Font weights (for use with font-variation-settings or utility classes) */
-  --wght-light: 300;
+  --wght-thin: 300;
+  --wght-light: 350;
   --wght-regular: 400;
+  --wght-medium: 500;
+  --wght-semibold: 600;
   --wght-bold: 700;
 
+  
   /* Color palette */
   --color-blue: #4F6AB2;
   --color-green: #2b5938;
@@ -39,8 +43,6 @@ html, body {
   height: 100%;
   width: 100%;
   font-family: var(--font-body);
-  font-variation-settings: "wght" var(--wght-light);
-  font-weight: var(--wght-light); /* fallback */
   background-color: var(--color-white);
   color: var(--color-black);
   scroll-behavior: smooth;

@@ -41,8 +41,8 @@
     margin-top: 0.5rem;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
-    font-family: var(--font-headline);
-    font-weight: bold;
+    font-family: var(--font-body);
+    font-weight: var(--wght-bold);
     border: 2px solid black;
     background: transparent;
     cursor: pointer;
