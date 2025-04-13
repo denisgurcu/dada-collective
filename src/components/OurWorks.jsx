@@ -47,7 +47,7 @@ const OurWorks = () => {
             />
           </div>
         </motion.div>
-        <div style={{ height: '200vh' }} />
+        {/* <div style={{ height: '200vh' }} /> */}
 
       </div>
     ))}
