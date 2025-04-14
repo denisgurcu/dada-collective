@@ -56,3 +56,9 @@ I also led the branding and creative direction — from color palette and typogr
 3. Start the server with `npm run dev`
 
 ---
+
+## 🥰 Live Demo
+
+Check out the deployed project here:  
+👉 [https://dada-collective.vercel.app](https://dada-collective.vercel.app)
+
