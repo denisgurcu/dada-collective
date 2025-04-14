@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 
-import { projects } from '../data/projects';
+import { projects } from '../../data/projects';
 import './OurWorks.css';
 
 const OurWorks = () => {

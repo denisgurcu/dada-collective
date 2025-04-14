@@ -6,8 +6,8 @@ import {
   useSpring,
   useAnimation,
 } from "framer-motion";
-import leftHand from "../assets/hand-left.png";
-import rightHand from "../assets/hand-right.png";
+import leftHand from "../../assets/images/hand-left.png";
+import rightHand from "../../assets/images/hand-right.png";
 import "./HowItWorks.css";
 
 const HowItWorks = () => {
