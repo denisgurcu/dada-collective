@@ -7,7 +7,7 @@ import Button from "../Button/Button";
 // import MaskedTitle from './MaskedTitle'; 
 
 const text = `
-Dada Collective is a design studio that breaks mold.
+Dada Collective is a design studio that breaks the mold.
 Where contrast fuels every bold connection.
 With care and chaos, we shape what’s real.
 Designing identities you don’t just see, but feel.
