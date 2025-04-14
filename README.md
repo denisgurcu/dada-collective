@@ -1,12 +1,58 @@
-# React + Vite
+# DADA Collective — Final QA Term Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a custom-coded one-page website built for the QA course at BCIT. The project showcases our abilities to design, develop, and test a creative website using modern tools and QA workflows.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Project Overview
 
-## Expanding the ESLint configuration
+**DADA Collective** is a bold, animated web experience for a fictional creative studio. The site explores experimental motion, scroll-based interactions, and layered visual storytelling.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ⚙️ Key Features
+
+- React + Vite front-end  
+- Scroll-triggered animations using Framer Motion  
+- Parallax WebM videos with smooth transforms  
+- Image & video compression for performance  
+- Trello for bug tracking  
+- Desktop-first layout (not fully responsive)
+
+---
+
+## 🧪 QA Highlights
+
+- Tested across Chrome, Safari, Firefox (desktop + mobile)  
+- Logged and resolved 10+ issues using GitHub  
+- Compressed all media assets using **Squoosh** and **FFmpeg**  
+- Created structured QA reports for each fix  
+- Maintained organized commits and branching
+
+---
+
+## 🧑‍💻 My Role
+
+I handled all development and QA implementation.  
+I also led the branding and creative direction — from color palette and typography to animation behavior.
+
+---
+
+## 💻 Tech Stack
+
+- React  
+- Vite  
+- Framer Motion  
+- FFmpeg  
+- Squoosh  
+- GitHub
+
+---
+
+## 🚀 How to Run the Project
+
+1. Clone the repository  
+2. Run `npm install`  
+3. Start the server with `npm run dev`
+
+---
