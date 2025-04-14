@@ -1,8 +1,8 @@
 import React, { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import "./WhoAreWe.css";
-import ParallaxVideos from './ParallaxVideos';
-import Button from "../components/Button";
+import ParallaxVideos from "../ParallaxVideos/ParallaxVideos";
+import Button from "../Button/Button";
 
 // import MaskedTitle from './MaskedTitle'; 
 

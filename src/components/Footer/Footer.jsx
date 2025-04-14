@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.css";
-import screamImg from '../assets/scream.png';
-import Button from "../components/Button";
+import screamImg from '../../assets/images/scream.png';
+import Button from "../Button/Button";
 
 const Footer = () => {
   return (

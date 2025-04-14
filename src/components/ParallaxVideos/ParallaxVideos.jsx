@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import { motion, useTransform, useSpring } from "framer-motion";
 import "./ParallaxVideos.css";
+import editorial1 from "../../assets/videos/editorial1.webm";
+import editorial2 from "../../assets/videos/editorial2.webm";
+
 
 const ParallaxVideos = ({ scrollProgress }) => {
   // Add smooth spring
@@ -25,7 +28,7 @@ const ParallaxVideos = ({ scrollProgress }) => {
     <>
       <motion.video
         className="who-we-vid top-right"
-        src="/videos/editorial1.webm"
+        src={editorial1}
         autoPlay
         muted
         loop
@@ -34,7 +37,7 @@ const ParallaxVideos = ({ scrollProgress }) => {
       />
       <motion.video
         className="who-we-vid bottom-left"
-        src="/videos/editorial2.webm"
+        src={editorial2}
         autoPlay
         muted
         loop

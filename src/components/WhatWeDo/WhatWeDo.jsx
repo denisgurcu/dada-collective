@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import gsap from "gsap";
 import { motion, useScroll, useInView } from "framer-motion";
-import Button from "../components/Button";
+import Button from "../Button/Button";
 import "./WhatWeDo.css";
 
 const services = [
