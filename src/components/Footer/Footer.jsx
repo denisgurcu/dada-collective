@@ -1,14 +1,32 @@
-import React from "react";
-import "./Footer.css";
-import screamImg from '../../assets/images/scream.png';
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import screamImg from "../../assets/images/scream.png";
 import Button from "../Button/Button";
+import "./Footer.css";
 
 const Footer = () => {
+  const footerRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: footerRef,
+    offset: ["start end", "end end"],
+  });
+
+  // Subtle floating effect on scroll
+  const y = useSpring(useTransform(scrollYProgress, [0, 1], ["0px", "-30px"]), {
+    stiffness: 60,
+    damping: 15,
+  });
+
   return (
-    <footer className="footer-section">
-      {/* Scream image on the left */}
+    <footer className="footer-section" ref={footerRef}>
       <div className="footer-image">
-        <img src={screamImg} alt="Scream" />
+        <motion.img
+          src={screamImg}
+          alt="Scream"
+          className="footer-scream-image"
+          style={{ y }}
+        />
       </div>
 
       {/* Right side: Form (top) + Contact Info (bottom) */}
