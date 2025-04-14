@@ -43,23 +43,27 @@ const HowItWorks = () => {
 
   // HAND POSITION (slide in)
   const handsOpacity = useSpring(
-    useTransform(scrollYProgress, [0.58, 0.7], [0, 1]),
+    useTransform(scrollYProgress, [0.48, 0.82], [0, 1]),
     { stiffness: 100, damping: 20 }
   );
+  
   const handsY = useSpring(
-    useTransform(scrollYProgress, [0.58, 0.7], ["50%", "0%"]),
+    useTransform(scrollYProgress, [0.48, 0.82], ["50%", "0%"]),
     { stiffness: 100, damping: 20 }
   );
+  
   const leftHandX = useSpring(
-    useTransform(scrollYProgress, [0.58, 0.7], ["-100%", "0%"]),
+    useTransform(scrollYProgress, [0.48, 0.82], ["-100%", "0%"]),
     { stiffness: 80, damping: 20 }
   );
+  
   const rightHandX = useSpring(
-    useTransform(scrollYProgress, [0.58, 0.7], ["100%", "0%"]),
+    useTransform(scrollYProgress, [0.48, 0.82], ["100%", "0%"]),
     { stiffness: 80, damping: 20 }
   );
+  
 
-  // 👇 Bounce logic – run ONCE
+  // Bounce logic – run ONCE
   useEffect(() => {
     return scrollYProgress.on("change", (v) => {
       if (v > 0.75 && !hasBounced) {
